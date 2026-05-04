@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1주차 - 생존 준비</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, "Noto Sans KR", sans-serif;
+      background: #0f160c;
+      color: #f4ead0;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 42px 7%;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(5, 10, 5, 0.68);
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .top-bar {
+      position: absolute;
+      top: 32px;
+      left: 7%;
+      right: 7%;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .page-title {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .home-btn {
+      color: #f4ead0;
+      text-decoration: none;
+      border: 1px solid rgba(244, 234, 208, 0.7);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      transition: 0.3s;
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    .home-btn:hover {
+      background: #f4ead0;
+      color: #10170d;
+    }
+
+    .intro {
+      max-width: 920px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 1.9;
+      font-size: 18px;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 42px;
+      border-radius: 24px;
+      backdrop-filter: blur(4px);
+    }
+
+    .item-section {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .number-box {
+      width: 92px;
+      height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 46px;
+      font-weight: 900;
+      color: #10170d;
+      border-radius: 18px;
+    }
+
+    .section-label h2 {
+      margin: 0;
+      font-size: 48px;
+      letter-spacing: -2px;
+    }
+
+    .items {
+      display: grid;
+      gap: 28px;
+    }
+
+    .item-card {
+      background: rgba(0, 0, 0, 0.42);
+      border: 1px solid rgba(244, 234, 208, 0.2);
+      border-radius: 22px;
+      padding: 28px;
+      backdrop-filter: blur(5px);
+    }
+
+    .item-card h3 {
+      margin: 0 0 18px;
+      font-size: 24px;
+      color: #ffe9a8;
+    }
+
+    .item-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .item-list span {
+      padding: 10px 15px;
+      border-radius: 999px;
+      background: rgba(244, 234, 208, 0.12);
+      border: 1px solid rgba(244, 234, 208, 0.18);
+      font-size: 15px;
+    }
+
+    .bg1 { background-image: url("week1-bg1.jpg"); }
+    .bg2 { background-image: url("week1-bg2.jpg"); }
+    .bg3 { background-image: url("week1-bg3.jpg"); }
+    .bg4 { background-image: url("week1-bg4.jpg"); }
+    .bg5 { background-image: url("week1-bg5.jpg"); }
+    .bg6 { background-image: url("week1-bg6.jpg"); }
+    .bg7 { background-image: url("week1-bg7.jpg"); }
+    .bg8 { background-image: url("week1-bg8.jpg"); }
+
+    .temp { background: #e07a2f; }
+    .water { background: #5bb7d8; }
+    .food { background: #d9a441; }
+    .medical { background: #e85b5b; }
+    .tool { background: #9b8b6f; }
+    .comm { background: #7aa7ff; }
+    .etc { background: #b7d37b; }
+
+    @media (max-width: 900px) {
+      .item-section {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .section-label h2 {
+        font-size: 38px;
+      }
+
+      .intro {
+        font-size: 16px;
+        padding: 28px;
+      }
+
+      .top-bar {
+        top: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="bg1">
+    <div class="top-bar">
+      <div class="page-title">1주차 - 생존 준비</div>
+      <a href="index.html" class="home-btn">메인페이지</a>
+    </div>
+
+    <div class="content">
+      <div class="intro">
+        생존 준비는 예상하지 못한 위기 상황에서 자신의 생명과 안전을 지키기 위해 미리 대비하는 모든 과정을 의미한다.
+        자연재해, 사고, 고립 상황 등은 언제 어디서든 발생할 수 있기 때문에 사전에 준비하는 것이 매우 중요하다.
+        많은 사람들은 평소에는 이를 크게 신경 쓰지 않지만, 위기가 닥치면 준비 여부에 따라 생존 가능성이 크게 달라진다.
+        생존 준비는 단순히 물건을 챙기는 것이 아니라 상황을 판단하고 대응하는 능력까지 포함하는 개념이다.
+        특히 체온 유지, 식수 확보, 기본적인 의료 지식은 생존의 핵심 요소로 꼽힌다.
+        준비가 되어 있으면 공포와 혼란 속에서도 비교적 침착하게 행동할 수 있다.
+        반대로 아무런 대비가 없다면 작은 문제도 치명적인 결과로 이어질 수 있다.
+        또한 생존 준비는 개인뿐만 아니라 주변 사람들의 안전까지 지킬 수 있는 기반이 된다.
+        평소에 기본적인 장비와 지식을 갖춰두는 것은 자신을 보호하는 가장 현실적인 방법이다.
+        결국 생존 준비는 선택이 아니라 언제든 닥칠 수 있는 상황에 대한 필수적인 대비라고 볼 수 있다.
+        아래 항목을 참고하여 생존을 위한 첫걸음을 시작하자.
+      </div>
+    </div>
+  </section>
+
+  <section class="bg2">
+    <div class="content item-section">
+      <div class="section-label">
+        <div class="number-box temp">1</div>
+        <h2>체온보호</h2>
+      </div>
+
+      <div class="items">
+        <div class="item-card">
+          <h3>필수품</h3>
+          <div class="item-list">
+            <span>은박 담요</span><span>발포 매트</span><span>우비</span><span>여분 옷</span>
+            <span>속옷</span><span>양말</span><span>모자</span><span>장갑</span>
+            <span>방수 터보 라이터</span><span>파이어스틱</span>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <h3>선택</h3>
+          <div class="item-list">
+            <span>텐트</span><span>핫팩</span><span>담요</span><span>넥워머</span>
+            <span>라이터</span><span>캔들</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg3">
+    <div class="content item-section">
+      <div class="section-label">
+        <div class="number-box water">2</div>
+        <h2>식수</h2>
+      </div>
+
+      <div class="items">
+        <div class="item-card">
+          <h3>물품</h3>
+          <div class="item-list">
+            <span>생수</span><span>서바이벌 스트로우</span><span>정수 알약</span><span>비상 식수</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg4">
+    <div class="content item-section">
+      <div class="section-label">
+        <div class="number-box food">3</div>
+        <h2>식량</h2>
+      </div>
+
+      <div class="items">
+        <div class="item-card">
+          <h3>필수품</h3>
+          <div class="item-list">
+            <span>에너지바</span><span>견과류</span><span>초콜릿</span><span>프로틴바</span><span>다이제</span>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <h3>선택</h3>
+          <div class="item-list">
+            <span>꿀</span><span>사탕</span><span>커피믹스</span><span>건빵</span><span>건조식품</span>
+            <span>라면</span><span>통조림</span><span>비타민</span><span>껌</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg5">
+    <div class="content item-section">
+      <div class="section-label">
+        <div class="number-box medical">4</div>
+        <h2>의료/위생</h2>
+      </div>
+
+      <div class="items">
+        <div class="item-card">
+          <h3>필수품</h3>
+          <div class="item-list">
+            <span>알코올 솜</span><span>포비돈 용액</span><span>멸균 거즈</span><span>의료용 테이프</span>
+            <span>붕대</span><span>지사제</span><span>항생제</span><span>밴드</span><span>진통제</span><span>비누</span>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <h3>선택</h3>
+          <div class="item-list">
+            <span>휴지</span><span>핀셋</span><span>쪽가위</span><span>마스크</span><span>위장약</span>
+            <span>소화약</span><span>파스</span><span>지혈대</span><span>손톱깎이</span>
+            <span>치약</span><span>칫솔</span><span>수건</span><span>물티슈</span><span>면봉</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg6">
+    <div class="content item-section">
+      <div class="section-label">
+        <div class="number-box tool">5</div>
+        <h2>도구</h2>
+      </div>
+
+      <div class="items">
+        <div class="item-card">
+          <h3>필수품</h3>
+          <div class="item-list">
+            <span>칼</span><span>손전등</span><span>헤드랜턴</span><span>자가 발전 후레쉬</span>
+            <span>금속 컵</span><span>로프</span><span>멀티툴</span><span>덕테이프</span><span>호루라기</span><span>가위</span>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <h3>선택</h3>
+          <div class="item-list">
+            <span>도끼</span><span>야전삽</span><span>랜턴</span><span>쇠 지렛대</span><span>삼단봉</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg7">
+    <div class="content item-section">
+      <div class="section-label">
+        <div class="number-box comm">6</div>
+        <h2>통신</h2>
+      </div>
+
+      <div class="items">
+        <div class="item-card">
+          <h3>필수품</h3>
+          <div class="item-list">
+            <span>크랭크 라디오</span>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <h3>선택</h3>
+          <div class="item-list">
+            <span>라디오</span><span>무전기</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg8">
+    <div class="content item-section">
+      <div class="section-label">
+        <div class="number-box etc">7</div>
+        <h2>기타</h2>
+      </div>
+
+      <div class="items">
+        <div class="item-card">
+          <h3>필수품</h3>
+          <div class="item-list">
+            <span>배터리</span><span>충전기</span><span>나침반</span><span>비닐</span>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <h3>선택</h3>
+          <div class="item-list">
+            <span>현금</span><span>신분증</span><span>카라비너</span><span>노트</span><span>펜</span>
+            <span>시계</span><span>방독면</span><span>헬멧</span><span>휴대용 발전기</span>
+            <span>클립</span><span>온도계</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
